@@ -9,6 +9,7 @@ import statistics
 
 def main(): #function to display byline
     print(byline)
+    
 #defining all variables
 Team_name: str="Cardinals"
 count_players_on_active_roster: int=26 #of players on an active roster, not just hitters
@@ -16,6 +17,7 @@ made_playoffs: bool=False #reflects outcome of 2023
 top_10_hitters_average: float=.258
 positions_played: list= ["infield, outfield, catcher"]
 batting_averages: list=[.284,.276,.268,.266,.264,.261,.248,.244,.236,.233]
+
 #strings made from above variables
 active_players_string: str=f"There are currently {count_players_on_active_roster} players on the active roster."
 made_playoffs_string: str=f"Did the Cardinals make the playoffs in 2023? {made_playoffs}"
@@ -32,6 +34,7 @@ mean=statistics.mean(batting_averages)
 mode=statistics.mode(batting_averages)
 median=statistics.median(batting_averages)
 standard_deviation=statistics.stdev(batting_averages)
+
 #creating a string for all batting stats to be called on in byline
 batting_stats_string: str=f"""
   Descriptive statistics for batting averages
@@ -45,7 +48,6 @@ batting_stats_string: str=f"""
   standard deviation: {standard_deviation}
 """
 
-
 byline: str=f"""
 {Team_name}
 {active_players_string}
@@ -55,6 +57,7 @@ byline: str=f"""
 {batting_averages_string}
 {batting_stats_string}
 """
+
 #code can only run from this script
 if __name__ == '__main__':
     main()
